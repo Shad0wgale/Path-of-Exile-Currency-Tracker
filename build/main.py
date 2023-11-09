@@ -16,9 +16,8 @@ dict = response.json()
 
 currencies = dict['lines']
 
-for x in range(109):
+for x in range(106):
     data = (currencies[x]) #info for every currency
-    sorted(data['receiveSparkLine']['totalChange'])
     profitmargin1 = (data['receiveSparkLine']['totalChange'] -data['paySparkLine']['totalChange'])
     profitmargin2 = (data['paySparkLine']['totalChange'] - data['receiveSparkLine']['totalChange'])
     profitmargin3 = max(profitmargin1,profitmargin2)
