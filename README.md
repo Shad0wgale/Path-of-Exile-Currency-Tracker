@@ -7,3 +7,4 @@
 
 1. Calculate greatest difference between sold and purchased value
 2. Implement other common goods that are flipped
+3. Apply data science functions to find trends
