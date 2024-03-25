@@ -1,6 +1,7 @@
 import requests
 import pprint
 import json
+
 option = input('1. Softcore 2. Hardcore 3. Standard')
 
 response = requests.get('https://poe.ninja/api/data/currencyoverview?league=Ancestor&type=Currency')
@@ -16,12 +17,15 @@ dict = response.json()
 
 currencies = dict['lines']
 
+data = [0] * len(currencies)
 for x in range(len(currencies)):
-    data = (currencies[x]) #info for every currency
-    profitmargin1 = (data['receiveSparkLine']['totalChange'] -data['paySparkLine']['totalChange'])
-    profitmargin2 = (data['paySparkLine']['totalChange'] - data['receiveSparkLine']['totalChange'])
-    profitmargin3 = max(profitmargin1,profitmargin2)
-    profitmarginfinal = str(round(profitmargin3,8))
-    print(data['currencyTypeName'], '|', profitmarginfinal,' chaos profit')
+    data[x] = (currencies[x]) #info for every currency
+    #print(data['currencyTypeName'],data['pay'])
+
+data.sort
+
+for x in range(len(data)):
+    print(data[x]['currencyTypeName'], data[x]['chaosEquivalent'], 'chaos orbs')
+
 
 input('Press the Enter key to exit...')
