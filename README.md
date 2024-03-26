@@ -1,3 +1,10 @@
-# POE-Project
+# Path of Exile currency tracker
+<!--TODO: Update readme-->
+## Current Functionality
+1. Pull currency names and values from poe.ninja API
 
- Simple project that will fetch data from an online database using an external API
+### Future plans
+
+1. Calculate greatest difference between sold and purchased value
+2. Implement other common goods that are flipped
+3. Apply data science functions to find trends
